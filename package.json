@@ -1,0 +1,21 @@
+{
+  "name": "teg-cv",
+  "version": "1.0.0",
+  "description": "CV PDF generator",
+  "main": "index.js",
+  "scripts": {
+    "pdf": "tsx generate-pdf.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "playwright": "^1.62.1",
+    "tsx": "^4.20.0",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  }
+}

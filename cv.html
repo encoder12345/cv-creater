@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Srujal Choudary Dhulipala - Curriculum Vitae</title>
+
+  <style>
+    /* =========================================================
+       A4 / PDF SAFE BASE
+       ========================================================= */
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 210mm;
+      min-width: 210mm;
+      height: 297mm;
+      min-height: 297mm;
+    }
+
+    body {
+      background: #cbd5e1;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+      color: #1e293b;
+
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+
+    /* =========================================================
+       SINGLE A4 SHEET
+       ========================================================= */
+
+    .page {
+      position: relative;
+
+      width: 210mm;
+      height: 297mm;
+      min-height: 297mm;
+      max-height: 297mm;
+
+      margin: 10px auto;
+
+      display: grid;
+      grid-template-columns: 33% 67%;
+
+      background: #ffffff;
+
+      overflow: hidden;
+
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
+
+      isolation: isolate;
+    }
+
+    /* =========================================================
+       LEFT PANEL
+       ========================================================= */
+
+    .left {
+      position: relative;
+
+      width: 100%;
+      height: 297mm;
+      min-height: 0;
+
+      background:
+        linear-gradient(
+          135deg,
+          #020617 0%,
+          #090d1f 40%,
+          #0369a1 100%
+        );
+
+      color: #f8fafc;
+
+      padding: 7.75mm 5mm 6.75mm 5mm;
+
+      display: flex;
+      flex-direction: column;
+
+      overflow: hidden;
+
+      border-right: 1px solid rgba(255, 255, 255, 0.12);
+
+      z-index: 1;
+
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /*
+      Decorative angled shapes are deliberately simple and
+      print-safe. They stay behind all text.
+    */
+
+    .left::before {
+      content: "";
+      position: absolute;
+      top: -35mm;
+      left: -18mm;
+      width: 78mm;
+      height: 75mm;
+
+      background: linear-gradient(
+        135deg,
+        rgba(56, 189, 248, 0.24),
+        rgba(129, 140, 248, 0.02)
+      );
+
+      transform: rotate(-18deg);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .left::after {
+      content: "";
+      position: absolute;
+      right: -30mm;
+      bottom: -25mm;
+      width: 75mm;
+      height: 80mm;
+
+      background: linear-gradient(
+        135deg,
+        rgba(56, 189, 248, 0.10),
+        rgba(129, 140, 248, 0.01)
+      );
+
+      transform: rotate(18deg);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .left > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .graphic-banner {
+      height: 2mm;
+      width: 22mm;
+
+      margin-bottom: 3mm;
+
+      background: linear-gradient(
+        90deg,
+        #38bdf8,
+        #818cf8
+      );
+
+      border-radius: 2px;
+    }
+
+    /* =========================================================
+       LEFT SECTIONS
+       ========================================================= */
+
+    .left-section {
+      position: relative;
+      margin: 0 0 3mm 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+
+      gap: 2mm;
+
+      margin: 0 0 2.2mm 0;
+
+      font-size: 10px;
+      line-height: 1.1;
+      font-weight: 800;
+
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+
+      color: #cbd5e1;
+    }
+
+    .section-title .bar {
+      flex: 0 0 auto;
+
+      width: 3px;
+      height: 11px;
+
+      background: linear-gradient(
+        180deg,
+        #38bdf8,
+        #818cf8
+      );
+
+      border-radius: 2px;
+    }
+
+    /* =========================================================
+       CONTACT
+       ========================================================= */
+
+    .contact-list {
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+
+      font-size: 9.5px;
+      line-height: 1.3;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: center;
+
+      width: 100%;
+
+      gap: 2mm;
+
+      margin-bottom: 1.7mm;
+
+      padding: 1.75px 4px;
+
+      word-break: break-word;
+
+      color: #e2e8f0;
+
+      background: rgba(255, 255, 255, 0.045);
+
+      border: 1px solid rgba(255, 255, 255, 0.07);
+
+      border-radius: 4px;
+    }
+
+    /* =========================================================
+       DIVIDERS
+       ========================================================= */
+
+    .left-divider {
+      width: 100%;
+      height: 1px;
+
+      margin: 2.5mm 0;
+
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.18),
+        rgba(255, 255, 255, 0)
+      );
+    }
+
+    /* =========================================================
+       CORE SKILLS
+       ========================================================= */
+
+    .skill-chips {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 1.4mm;
+    }
+
+    .chip {
+      display: inline-block;
+
+      padding: 1.75px 6px;
+
+      font-size: 8.8px;
+      line-height: 1.25;
+      font-weight: 600;
+
+      color: #dbeafe;
+
+      background: rgba(255, 255, 255, 0.065);
+
+      border: 1px solid rgba(255, 255, 255, 0.13);
+
+      border-radius: 3px;
+    }
+
+    /* =========================================================
+       TECHNICAL SKILLS
+       ========================================================= */
+
+    .tech-group {
+      margin-bottom: 2mm;
+      padding: 1.75mm 2.5mm;
+
+      background: rgba(255, 255, 255, 0.035);
+
+      border: 1px solid rgba(255, 255, 255, 0.075);
+      border-left: 2px solid #38bdf8;
+
+      border-radius: 3px;
+
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .tech-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .tech-title {
+      margin-bottom: 0.5mm;
+
+      font-size: 9.5px;
+      line-height: 1.2;
+      font-weight: 700;
+
+      color: #f8fafc;
+    }
+
+    .tech-detail {
+      font-size: 9px;
+      line-height: 1.3;
+
+      color: #cbd5e1;
+    }
+
+    /* =========================================================
+       AVAILABILITY
+       ========================================================= */
+
+    .availability-card {
+      display: flex;
+      flex-direction: column;
+
+      gap: 1mm;
+
+      margin-top: 3mm;
+
+      padding: 5.75px 8px;
+
+      background: linear-gradient(
+        135deg,
+        rgba(56, 189, 248, 0.20) 0%,
+        rgba(129, 140, 248, 0.08) 100%
+      );
+
+      border: 1px solid rgba(56, 189, 248, 0.50);
+
+      border-radius: 5px;
+
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .availability-header {
+      display: flex;
+      align-items: center;
+
+      gap: 1.5mm;
+
+      font-size: 9px;
+      line-height: 1.2;
+      font-weight: 800;
+
+      color: #38bdf8;
+
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .availability-days {
+      padding-left: 3mm;
+
+      font-size: 9px;
+      line-height: 1.3;
+      font-weight: 500;
+
+      color: #e2e8f0;
+    }
+
+    .status-dot {
+      flex: 0 0 auto;
+
+      width: 6px;
+      height: 6px;
+
+      background: #38bdf8;
+
+      border-radius: 50%;
+    }
+
+    /* =========================================================
+       RIGHT PANEL
+       ========================================================= */
+
+    .right {
+      position: relative;
+
+      width: 100%;
+      height: 297mm;
+      min-height: 0;
+
+      background: #ffffff;
+
+      padding: 6.75mm 7mm 5.75mm 7mm;
+
+      display: flex;
+      flex-direction: column;
+
+      overflow: hidden;
+
+      z-index: 1;
+    }
+
+    .right::before {
+      content: "";
+      position: absolute;
+
+      top: 0;
+      right: 0;
+
+      width: 55mm;
+      height: 32mm;
+
+      background: linear-gradient(
+        135deg,
+        rgba(14, 165, 233, 0.08),
+        rgba(129, 140, 248, 0)
+      );
+
+      clip-path: polygon(
+        30% 0,
+        100% 0,
+        100% 100%,
+        0 30%
+      );
+
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .right > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+
+    .header {
+      margin-bottom: 3mm;
+
+      padding: 2.75mm 4.5mm;
+
+      background: linear-gradient(
+        135deg,
+        #f0f9ff 0%,
+        #e0f2fe 100%
+      );
+
+      border: 1px solid #bae6fd;
+      border-left: 4px solid #0284c7;
+
+      border-radius: 5px;
+
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .name {
+      margin: 0;
+
+      font-size: 19.5px;
+      line-height: 1.1;
+      font-weight: 900;
+
+      color: #0f172a;
+    }
+
+    .name .blue {
+      color: #0284c7;
+    }
+
+    .subtitle {
+      margin-top: 1mm;
+
+      font-size: 9px;
+      line-height: 1.2;
+      font-weight: 800;
+
+      color: #0369a1;
+
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* =========================================================
+       RIGHT SECTIONS
+       ========================================================= */
+
+    .right-section {
+      position: relative;
+
+      margin-top: 3mm;
+
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .right-section:first-of-type {
+      margin-top: 0;
+    }
+
+    .right-title {
+      display: flex;
+      align-items: center;
+
+      gap: 2mm;
+
+      margin: 0 0 1.5mm 0;
+
+      font-size: 10.5px;
+      line-height: 1.15;
+      font-weight: 800;
+
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+
+      color: #0f172a;
+    }
+
+    .right-title::after {
+      content: "";
+
+      flex: 1;
+
+      height: 1px;
+
+      margin-left: 1mm;
+
+      background: #e2e8f0;
+    }
+
+    /* =========================================================
+       PROFILE
+       ========================================================= */
+
+    .body-text {
+      margin: 0;
+
+      padding: 1.75mm 3mm;
+
+      font-size: 9.4px;
+      line-height: 1.4;
+
+      color: #334155;
+
+      background: #f8fafc;
+
+      border: 1px solid #e2e8f0;
+
+      border-radius: 4px;
+    }
+
+    /* =========================================================
+       TAGS
+       ========================================================= */
+
+    .inline-tag {
+      display: inline-flex;
+      align-items: center;
+
+      padding: 0.75px 4px;
+      margin-right: 2px;
+
+      font-size: 8.5px;
+      line-height: 1.2;
+      font-weight: 700;
+
+      color: #0369a1;
+
+      background: #f1f5f9;
+
+      border: 1px solid #cbd5e1;
+
+      border-radius: 3px;
+    }
+
+    /* =========================================================
+       TIMELINE
+       ========================================================= */
+
+    .timeline {
+      position: relative;
+
+      margin-left: 1.5mm;
+      padding-left: 4mm;
+    }
+
+    .timeline::before {
+      content: "";
+
+      position: absolute;
+
+      top: 2px;
+      bottom: 2px;
+      left: 0;
+
+      width: 1.5px;
+
+      background: #cbd5e1;
+    }
+
+    .job {
+      position: relative;
+
+      margin-bottom: 2.5mm;
+
+      padding: 1.25mm 2.5mm;
+
+      background: #ffffff;
+
+      border: 1px solid #f1f5f9;
+
+      border-radius: 4px;
+
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job::before {
+      content: "";
+
+      position: absolute;
+
+      left: -5.2mm;
+      top: 3.5px;
+
+      width: 7px;
+      height: 7px;
+
+      background: #ffffff;
+
+      border: 2px solid #0284c7;
+
+      border-radius: 50%;
+
+      z-index: 2;
+    }
+
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+
+      gap: 2mm;
+    }
+
+    .job-title {
+      font-size: 9.8px;
+      line-height: 1.2;
+      font-weight: 800;
+
+      color: #0f172a;
+    }
+
+    .job-date {
+      flex: 0 0 auto;
+
+      padding: 0.75px 4px;
+
+      font-size: 8px;
+      line-height: 1.2;
+      font-weight: 700;
+
+      color: #0369a1;
+
+      background: #e0f2fe;
+
+      border-radius: 3px;
+
+      white-space: nowrap;
+    }
+
+    .job-company {
+      margin-top: 0.2mm;
+
+      font-size: 8.8px;
+      line-height: 1.2;
+      font-weight: 600;
+      font-style: italic;
+
+      color: #0284c7;
+    }
+
+    .job-desc {
+      margin-top: 0.5mm;
+
+      font-size: 9.2px;
+      line-height: 1.35;
+
+      color: #475569;
+    }
+
+    /* =========================================================
+       EDUCATION
+       ========================================================= */
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      gap: 2mm;
+    }
+
+    .edu-card {
+      min-width: 0;
+
+      padding: 1.75mm 2.5mm;
+
+      background: #ffffff;
+
+      border: 1px solid #e2e8f0;
+      border-top: 2.5px solid #0284c7;
+
+      border-radius: 4px;
+
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .edu-card-title {
+      font-size: 9.4px;
+      line-height: 1.2;
+      font-weight: 800;
+
+      color: #0f172a;
+    }
+
+    .edu-card-sub {
+      margin-top: 0.2mm;
+
+      font-size: 8.2px;
+      line-height: 1.2;
+      font-weight: 700;
+
+      color: #0284c7;
+    }
+
+    .edu-card-desc {
+      margin-top: 0.8mm;
+
+      font-size: 8.8px;
+      line-height: 1.3;
+
+      color: #475569;
+    }
+
+    /* =========================================================
+       ACTIVITY CARD
+       ========================================================= */
+
+    .activity-card {
+      padding: 1.55mm 2.5mm;
+
+      background: #f8fafc;
+
+      border: 1px solid #e2e8f0;
+      border-left: 3px solid #38bdf8;
+
+      border-radius: 4px;
+
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .activity-title {
+      font-size: 9.4px;
+      line-height: 1.2;
+      font-weight: 800;
+
+      color: #0f172a;
+    }
+
+    .activity-text {
+      margin-top: 0.4mm;
+
+      font-size: 9px;
+      line-height: 1.3;
+
+      color: #475569;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    .footer {
+      margin-top: auto;
+      padding-top: 2mm;
+
+      font-size: 8.5px;
+      line-height: 1.2;
+      font-weight: 700;
+
+      color: #94a3b8;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      border-top: 1px solid #e2e8f0;
+    }
+
+    /* =========================================================
+       PRINT
+       ========================================================= */
+
+    @media print {
+      html,
+      body {
+        width: 210mm !important;
+        min-width: 210mm !important;
+
+        height: 297mm !important;
+        min-height: 297mm !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: #ffffff !important;
+
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+      }
+
+      .page {
+        width: 210mm !important;
+        height: 297mm !important;
+
+        min-height: 297mm !important;
+        max-height: 297mm !important;
+
+        margin: 0 !important;
+
+        box-shadow: none !important;
+
+        overflow: hidden !important;
+      }
+
+      .left {
+        height: 297mm !important;
+        min-height: 0 !important;
+
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .right {
+        height: 297mm !important;
+        min-height: 0 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page" id="sheet">
+
+    <!-- =======================================================
+         LEFT PANEL
+         ======================================================= -->
+
+    <aside class="left">
+
+      <div class="graphic-banner"></div>
+
+      <section class="left-section">
+        <h3 class="section-title">
+          <span class="bar"></span>
+          CONTACT
+        </h3>
+
+        <ul class="contact-list">
+          <li><span>Swindon, UK</span></li>
+          <li><span>+44 74599 09458</span></li>
+          <li><span>dhulipalasrujal@gmail.com</span></li>
+        </ul>
+      </section>
+
+      <div class="left-divider"></div>
+
+      <section class="left-section">
+        <h3 class="section-title">
+          <span class="bar"></span>
+          CORE SKILLS
+        </h3>
+
+        <div class="skill-chips">
+          <span class="chip">Problem Solving</span>
+          <span class="chip">Data Analytics</span>
+          <span class="chip">Communication</span>
+          <span class="chip">Teamwork</span>
+          <span class="chip">Research</span>
+          <span class="chip">Time Mgmt</span>
+          <span class="chip">Adaptability</span>
+        </div>
+      </section>
+
+      <div class="left-divider"></div>
+
+      <section class="left-section">
+        <h3 class="section-title">
+          <span class="bar"></span>
+          TECHNICAL SKILLS
+        </h3>
+
+        <div class="tech-group">
+          <div class="tech-title">Languages</div>
+          <div class="tech-detail">
+            Python, TypeScript, HTML/CSS, LEGO Mindstorms
+          </div>
+        </div>
+
+        <div class="tech-group">
+          <div class="tech-title">Software &amp; Data</div>
+          <div class="tech-detail">
+            MS Excel, MS Office, Google Workspace, Chi-squared (χ²) analysis
+          </div>
+        </div>
+
+        <div class="tech-group">
+          <div class="tech-title">Development</div>
+          <div class="tech-detail">
+            Client-server architecture, authentication, password hashing, debugging
+          </div>
+        </div>
+
+        <div class="tech-group">
+          <div class="tech-title">IT &amp; Systems</div>
+          <div class="tech-detail">
+            Basic networking, hardware troubleshooting &amp; Chromebook repair
+          </div>
+        </div>
+
+        <div class="availability-card">
+          <div class="availability-header">
+            <span class="status-dot"></span>
+            AVAILABLE IMMEDIATELY
+          </div>
+
+          <div class="availability-days">
+            Wednesdays, Fridays, Saturdays &amp; Sundays
+          </div>
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- =======================================================
+         RIGHT PANEL
+         ======================================================= -->
+
+    <main class="right">
+
+      <header class="header">
+        <h1 class="name">
+          Srujal <span class="blue">Choudary Dhulipala</span>
+        </h1>
+
+        <div class="subtitle">
+          BSc Computer Science · Oxford Brookes University
+        </div>
+      </header>
+
+      <!-- PROFILE -->
+
+      <section class="right-section">
+        <h2 class="right-title">Profile</h2>
+
+        <p class="body-text">
+          Computer Science student with strong analytical, technical, and communication skills.
+          Experienced in full-stack project development, statistical data analysis, and technical
+          troubleshooting, with a proven ability to independently master complex technologies
+          and solve practical problems.
+        </p>
+      </section>
+
+      <!-- EDUCATION -->
+
+      <section class="right-section">
+        <h2 class="right-title">Education</h2>
+
+        <div class="edu-grid">
+
+          <div class="edu-card">
+            <div class="edu-card-title">Oxford Brookes</div>
+            <div class="edu-card-sub">Sep 2026 – Present</div>
+            <div class="edu-card-desc">
+              <strong>BSc Computer Science</strong>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card-title">Swindon Academy</div>
+            <div class="edu-card-sub">Sep 2024 – Jun 2026</div>
+            <div class="edu-card-desc">
+              <strong>A-Levels:</strong>
+              Maths (A), Physics (B), CS (B), Further Maths (C)
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card-title">Trinity Academy</div>
+            <div class="edu-card-sub">Sep 2023 – Jun 2024</div>
+            <div class="edu-card-desc">
+              <strong>7 GCSEs:</strong>
+              Maths (8), Eng Lit (6) &amp; Science (9–8)
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+
+      <section class="right-section">
+        <h2 class="right-title">Experience</h2>
+
+        <div class="timeline">
+
+          <div class="job">
+            <div class="job-head">
+              <div class="job-title">
+                Sales Colleague
+              </div>
+
+              <div class="job-date">
+                Oct 2026 – Present
+              </div>
+            </div>
+
+            <div class="job-company">
+              Currys — Swindon
+            </div>
+
+            <div class="job-desc">
+              Building customer-service and communication skills in a retail environment, helping
+              customers with their enquiries and working collaboratively with the store team.
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-head">
+              <div class="job-title">
+                Private GCSE Mathematics Tutor
+              </div>
+
+              <div class="job-date">
+                Academic Year
+              </div>
+            </div>
+
+            <div class="job-company">
+              Secondary School Tutoring
+            </div>
+
+            <div class="job-desc">
+              Delivered weekly 1.5-hour targeted tutoring sessions over a full academic year.
+              Broke down difficult mathematical concepts, built student confidence, and tailored
+              lesson plans to individual learning needs.
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-head">
+              <div class="job-title">
+                Oxwash — Work Experience
+              </div>
+
+              <div class="job-date">
+                Placement
+              </div>
+            </div>
+
+            <div class="job-desc">
+              Shadowed professionals across software engineering, product management, and data
+              analytics. Observed agile sprint planning, technical prioritization, and cross-team
+              communication.
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-head">
+              <div class="job-title">
+                School IT Department — Work Experience
+              </div>
+
+              <div class="job-date">
+                Placement
+              </div>
+            </div>
+
+            <div class="job-desc">
+              Diagnosed and repaired faulty Chromebooks, building hands-on hardware and software
+              troubleshooting skills. Methodically organized inventory and managed equipment logistics.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+
+      <section class="right-section">
+        <h2 class="right-title">Projects</h2>
+
+        <div class="timeline">
+
+          <div class="job">
+            <div class="job-title">
+              Online Multiplayer Platformer (CS NEA)
+            </div>
+
+            <div class="job-desc">
+              Independently developed an online platformer using
+              <span class="inline-tag">Python</span>.
+              Engineered a custom client-server model supporting user authentication,
+              password verification, and real-time multiplayer battles with custom hashing algorithms.
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-title">
+              Autonomous Robotics Project
+            </div>
+
+            <div class="job-desc">
+              Led the programming team for a 6-person project constructing an autonomous
+              obstacle-avoiding robot using
+              <span class="inline-tag">LEGO Mindstorms</span>.
+              Coordinated a two-week development and testing schedule.
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-title">
+              Statistical Data Analysis
+            </div>
+
+            <div class="job-desc">
+              Analyzed geological datasets in
+              <span class="inline-tag">Microsoft Excel</span>
+              by conducting a
+              <span class="inline-tag">Chi-squared (χ²) test</span>,
+              calculating expected frequencies and automating repetitive calculations
+              to improve efficiency.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ACADEMIC ENRICHMENT -->
+
+      <section class="right-section">
+        <h2 class="right-title">
+          Academic Enrichment &amp; Leadership
+        </h2>
+
+        <div class="timeline">
+
+          <div class="job">
+            <div class="job-head">
+              <div class="job-title">
+                Academic Student Mentor
+              </div>
+
+              <div class="job-date">
+                Secondary Mentoring
+              </div>
+            </div>
+
+            <div class="job-desc">
+              Delivered targeted 1-on-1 academic support to a secondary student struggling
+              with key coursework. Identified specific learning gaps, simplified complex topics,
+              and adapted teaching methods to build confidence.
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-head">
+              <div class="job-title">
+                Cambridge &amp; Marlborough College Programme
+              </div>
+            </div>
+
+            <div class="job-desc">
+              Researched quantum phenomena independently and presented findings on subatomic
+              physics, demonstrating clear scientific communication.
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-head">
+              <div class="job-title">
+                School Scholars Programme — Quantum Computing
+              </div>
+            </div>
+
+            <div class="job-desc">
+              Investigated quantum computing architectures beyond the A-Level curriculum,
+              exploring qubit state manipulation and emerging technological applications.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="activity-card" style="margin-top: 2mm;">
+          <div class="activity-title">
+            Model United Nations — School Club
+          </div>
+
+          <div class="activity-text">
+            Researched international policy issues, presented arguments, and negotiated
+            resolutions across diverse year groups.
+          </div>
+        </div>
+      </section>
+
+      <!-- ADDITIONAL TECHNICAL LEARNING -->
+
+      <section class="right-section">
+        <h2 class="right-title">
+          Additional Technical Learning
+        </h2>
+
+        <div class="job" style="margin-bottom: 0;">
+          <div class="job-desc">
+            Independently researched
+            <span class="inline-tag">TypeScript</span>
+            and
+            <span class="inline-tag">Chromium Architecture</span>.
+            Designed and built this CV as a web document in HTML and CSS,
+            testing across modern browsers for print optimization.
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+
+      <div class="footer">
+        <span>Srujal Choudary Dhulipala</span>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
